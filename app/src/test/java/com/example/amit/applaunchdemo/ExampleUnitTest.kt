@@ -1,4 +1,4 @@
-package com.example.sellnews.applaunchdemo
+package com.example.amit.applaunchdemo
 
 import org.junit.Test
 

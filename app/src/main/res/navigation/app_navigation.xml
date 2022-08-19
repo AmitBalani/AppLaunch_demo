@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragmentWelcome"
+    android:id="@+id/app_navigation">
+
+
+    <fragment
+        android:id="@+id/fragmentWelcome"
+        android:name="com.example.amit.applaunchdemo.fragments.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome">
+
+        <action android:id="@+id/actionWelcomeToLogin"
+            app:destination="@id/fragmentLogin"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+
+        <action android:id="@+id/actionWelcomeToUserList"
+            app:destination="@id/fragmentUserList"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/fragmentLogin"
+        android:name="com.example.amit.applaunchdemo.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+
+
+        <action
+            android:id="@+id/actionLoginToUserList"
+            app:destination="@id/fragmentUserList"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:popUpTo="@id/fragmentWelcome" />
+
+    </fragment>
+
+    <fragment android:id="@+id/fragmentUserList"
+        android:name="com.example.amit.applaunchdemo.fragments.UserListFragment"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list">
+
+        <action
+            android:id="@+id/action_launcher_to_list"
+            app:destination="@id/fragmentUserList" />
+    </fragment>
+
+
+
+
+
+
+</navigation>

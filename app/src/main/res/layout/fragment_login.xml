@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.amit.applaunchdemo.viewmodel.LoginViewModel" />
+
+        <variable
+            name="handler"
+            type="com.example.amit.applaunchdemo.interfaces.LogInHandler" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".fragments.LoginFragment">
+
+        <RelativeLayout
+            android:id="@+id/rlTopContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_background_img" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ivBg"
+                android:layout_alignParentTop="true"
+                android:background="#EB000000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleText"
+                    style="@style/textView"
+                    android:layout_gravity="center"
+                    android:text="@string/log_in"
+                    android:textSize="@dimen/largerSize"
+                    app:fontFamily="@font/welcome_font" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/textView"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/normalPadding"
+                    android:layout_marginTop="@dimen/miniPadding"
+                    android:layout_marginEnd="@dimen/normalPadding"
+                    android:gravity="center"
+                    android:text="@string/login_msg" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlTopContent"
+            android:layout_marginTop="@dimen/minusBigPadding"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normalPadding"
+                android:layout_marginEnd="@dimen/normalPadding"
+                android:background="@drawable/drawable_edittext_bg"
+                android:hint="@string/email_address"
+                android:imeOptions="actionDone"
+                android:padding="@dimen/normalPadding"
+                android:singleLine="true"
+                android:text="@={viewModel.emailId}"
+                android:textColor="@color/white"
+                android:textColorHint="#34FFFFFF"
+                android:textSize="@dimen/extraMediumSize" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normalPadding"
+                android:layout_marginTop="@dimen/normalPadding"
+                android:layout_marginEnd="@dimen/normalPadding"
+                android:background="@drawable/drawable_edittext_bg"
+                android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:padding="@dimen/normalPadding"
+                android:singleLine="true"
+                android:text="@={viewModel.password}"
+                android:textColor="@color/white"
+                android:textColorHint="#34FFFFFF"
+                android:textSize="@dimen/extraMediumSize" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/largerPadding"
+            android:layout_marginEnd="@dimen/largerPadding"
+            android:layout_marginBottom="@dimen/normalPadding"
+            android:onClick="@{()->handler.onLogInClicked()}">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/microPadding"
+                android:layout_marginEnd="@dimen/microPadding"
+                android:layout_marginBottom="@dimen/minusMicroPadding"
+                android:background="@drawable/drawable_dark_blue_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/llLogin"
+                app:layout_constraintEnd_toEndOf="@+id/llLogin"
+                app:layout_constraintStart_toStartOf="@+id/llLogin"
+                app:layout_constraintTop_toTopOf="@+id/llLogin" />
+
+            <LinearLayout
+                android:id="@+id/llLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/miniPadding"
+                android:background="@drawable/drawable_blue_bg"
+                android:gravity="center"
+                android:paddingTop="@dimen/extraMediumPadding"
+                android:paddingBottom="@dimen/extraMediumPadding"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/textView"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/mediumPadding"
+                    android:layout_marginTop="@dimen/nanoPadding"
+                    android:text="@string/login"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/normalSize"
+                    app:fontFamily="@font/semibold" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".fragments.WelcomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_background_img" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivBg"
+            android:layout_alignParentTop="true"
+            android:background="#CB000000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleText"
+                style="@style/textView"
+                android:text="@string/welcome"
+                android:layout_gravity="center"
+                android:textSize="@dimen/largerSize"
+                app:fontFamily="@font/welcome_font" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/textView"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/normalPadding"
+                android:layout_marginEnd="@dimen/normalPadding"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/miniPadding"
+                android:text="@string/welcome_msg"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/largerPadding"
+        android:layout_marginEnd="@dimen/largerPadding"
+        android:layout_marginBottom="@dimen/normalPadding">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/microPadding"
+            android:layout_marginEnd="@dimen/microPadding"
+            android:layout_marginBottom="@dimen/minusMicroPadding"
+            android:background="@drawable/drawable_dark_blue_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/llLogin"
+            app:layout_constraintEnd_toEndOf="@+id/llLogin"
+            app:layout_constraintStart_toStartOf="@+id/llLogin"
+            app:layout_constraintTop_toTopOf="@+id/llLogin" />
+
+        <LinearLayout
+            android:id="@+id/llLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/miniPadding"
+            android:background="@drawable/drawable_blue_bg"
+            android:gravity="center"
+            android:paddingTop="@dimen/extraMediumPadding"
+            android:paddingBottom="@dimen/extraMediumPadding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/textView"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/mediumPadding"
+                android:layout_marginTop="@dimen/nanoPadding"
+                android:text="@string/login"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normalSize"
+                app:fontFamily="@font/semibold" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

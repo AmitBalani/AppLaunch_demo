@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AppLaunchDemo</string>
+    <string name="welcome">Welcome!</string>
+    <string name="login">Login</string>
+    <string name="welcome_msg">This app will provide you with weather details according to users, please login with your credentials.</string>
+    <string name="log_in">Log in</string>
+    <string name="login_msg">Please enter your Email Address and Password below</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="invalid_credentials_msg">Please enter valid email address and password.</string>
 </resources>

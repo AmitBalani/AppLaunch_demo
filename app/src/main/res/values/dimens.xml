@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="minusBigPadding">-100dp</dimen>
+    <dimen name="minusMicroPadding">-4dp</dimen>
+    <dimen name="nanoPadding">1.5dp</dimen>
+    <dimen name="microPadding">4dp</dimen>
+    <dimen name="miniPadding">6dp</dimen>
+    <dimen name="tinyPadding">7dp</dimen>
+    <dimen name="smallestPadding">9dp</dimen>
+    <dimen name="smallPadding">10dp</dimen>
+    <dimen name="mediumPadding">12dp</dimen>
+    <dimen name="extraMediumPadding">14dp</dimen>
+    <dimen name="normalPadding">17dp</dimen>
+    <dimen name="extraNormalPadding">20dp</dimen>
+    <dimen name="largePadding">22dp</dimen>
+    <dimen name="xlargePadding">25dp</dimen>
+    <dimen name="xxlargePadding">27dp</dimen>
+    <dimen name="xxxlargePadding">33dp</dimen>
+    <dimen name="largerPadding">36dp</dimen>
+    <dimen name="xlargerPadding">39dp</dimen>
+    <dimen name="xxlargerPadding">43dp</dimen>
+    <dimen name="largestPadding">45dp</dimen>
+    <dimen name="xlargestPadding">50dp</dimen>
+    <dimen name="xxlargestPadding">58dp</dimen>
+
+    <dimen name="miniSize">6sp</dimen>
+    <dimen name="tinnySize">7sp</dimen>
+    <dimen name="smallerSize">8sp</dimen>
+    <dimen name="smallSize">10sp</dimen>
+    <dimen name="mediumSize">12sp</dimen>
+    <dimen name="extraMediumSize">15sp</dimen>
+    <dimen name="normalSize">17sp</dimen>
+    <dimen name="largeSize">20sp</dimen>
+    <dimen name="xLargeSize">22sp</dimen>
+    <dimen name="xxLargeSize">25sp</dimen>
+    <dimen name="xxxLargeSize">32sp</dimen>
+    <dimen name="xxxxLargeSize">36sp</dimen>
+    <dimen name="largerSize">40sp</dimen>
+
+</resources>
