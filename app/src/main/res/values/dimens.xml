@@ -22,6 +22,13 @@
     <dimen name="largestPadding">45dp</dimen>
     <dimen name="xlargestPadding">50dp</dimen>
     <dimen name="xxlargestPadding">58dp</dimen>
+    <dimen name="sxbiggestPadding">134dp</dimen>
+    <dimen name="ssxbiggestPadding">164dp</dimen>
+    <dimen name="sssxbiggestPadding">194dp</dimen>
+    <dimen name="sxxbiggestPadding">216dp</dimen>
+    <dimen name="ssxxbiggestPadding">260dp</dimen>
+    <dimen name="xxxbiggestPadding">305dp</dimen>
+
 
     <dimen name="miniSize">6sp</dimen>
     <dimen name="tinnySize">7sp</dimen>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/tinyPadding"
+    app:cardBackgroundColor="@color/transparent"
+    app:cardCornerRadius="@dimen/tinyPadding"
+    app:cardElevation="@dimen/microPadding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/drawable_dialog_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/normalPadding"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitleMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/smallPadding"
+            android:layout_marginTop="@dimen/extraMediumPadding"
+            android:layout_marginEnd="@dimen/smallPadding"
+            android:fontFamily="@font/semibold"
+            android:text="@string/delete"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normalSize" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normalPadding"
+            android:layout_marginTop="@dimen/normalPadding"
+            android:layout_marginEnd="@dimen/normalPadding"
+            android:layout_marginBottom="-3dp"
+            android:fontFamily="@font/medium"
+            android:text="@string/delete_msg"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/mediumSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/xxlargePadding"
+            android:layout_marginTop="@dimen/xxlargePadding"
+            android:layout_marginEnd="@dimen/xxlargePadding"
+            android:layout_marginBottom="@dimen/largePadding"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/drawable_cancel_button_bg"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingTop="@dimen/mediumPadding"
+                android:paddingBottom="@dimen/mediumPadding"
+                android:text="@string/cancel"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOkay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mediumPadding"
+                android:layout_weight="1"
+                android:background="@drawable/drawable_grey_button_bg"
+                android:fontFamily="@font/semibold"
+                android:gravity="center"
+                android:paddingTop="@dimen/mediumPadding"
+                android:paddingBottom="@dimen/mediumPadding"
+                android:text="@string/delete"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

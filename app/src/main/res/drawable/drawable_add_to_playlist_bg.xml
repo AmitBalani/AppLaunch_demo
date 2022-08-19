@@ -1,0 +1,23 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item>
+        <shape>
+            <solid android:color="#2F3544" />
+            <corners
+                android:bottomLeftRadius="@dimen/normalPadding"
+                android:bottomRightRadius="@dimen/extraNormalPadding"
+                android:topLeftRadius="@dimen/normalPadding"
+                android:topRightRadius="@dimen/extraNormalPadding" />
+
+        </shape>
+    </item>
+
+    <item android:start="@dimen/microPadding">
+        <shape>
+            <solid android:color="@color/colorPrimary" />
+            <corners android:radius="@dimen/normalPadding" />
+
+        </shape>
+    </item>
+</layer-list>

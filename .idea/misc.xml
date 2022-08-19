@@ -3,12 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/drawable_add_to_playlist_bg.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/drawable_blue_bg.xml" value="0.1155" />
+        <entry key="app/src/main/res/drawable/drawable_cancel_button_bg.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/drawable_dark_blue_bg.xml" value="0.1155" />
+        <entry key="app/src/main/res/drawable/drawable_dialog_bg.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/drawable_edittext_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/drawable_grey_button_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/drawable_item_circle_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/drawable_top_view_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_delete_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.12" />
+        <entry key="app/src/main/res/layout/dialog_multi_purpose.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_user_list.xml" value="0.11" />
         <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_user_list.xml" value="0.1" />
       </map>
     </option>
   </component>

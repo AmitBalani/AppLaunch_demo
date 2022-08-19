@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/mediumPadding"
+    android:layout_marginTop="@dimen/smallPadding"
+    android:layout_marginEnd="@dimen/mediumPadding"
+    android:background="@drawable/drawable_add_to_playlist_bg">
+
+
+    <LinearLayout
+        android:id="@+id/llUserImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normalPadding"
+        android:layout_marginTop="@dimen/normalPadding"
+        android:layout_marginBottom="@dimen/normalPadding">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_item_circle_bg"
+            android:padding="@dimen/extraMediumPadding"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_user" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/normalPadding"
+        android:layout_toEndOf="@+id/llUserImage"
+        android:padding="@dimen/miniPadding"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            style="@style/textView"
+            android:ellipsize="marquee"
+            android:textSize="@dimen/mediumSize"
+            android:singleLine="true"
+            tools:text="First Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmailId"
+            style="@style/textView"
+            android:ellipsize="marquee"
+            android:textSize="@dimen/mediumSize"
+            android:singleLine="true"
+            tools:text="First Name" />
+
+    </LinearLayout>
+</RelativeLayout>

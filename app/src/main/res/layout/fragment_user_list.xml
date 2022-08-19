@@ -1,13 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".fragments.UserListFragment">
 
-    <TextView
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_top_view_bg"
+        android:padding="@dimen/miniPadding">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/miniPadding"
+            android:layout_marginTop="@dimen/miniPadding"
+            android:layout_marginEnd="@dimen/miniPadding"
+            android:layout_marginBottom="@dimen/miniPadding"
+            app:srcCompat="@drawable/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textView"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/normalPadding"
+            android:layout_toEndOf="@+id/ivBack"
+            android:text="@string/user_list"
+            android:textSize="@dimen/extraMediumSize" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/normalPadding"
+            app:srcCompat="@drawable/ic_add" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUserList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="User List Fragment" />
+        android:layout_below="@+id/rlToolbar"
+        android:layout_marginTop="@dimen/miniPadding"
+        />
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/llEmptyView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        >
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="@dimen/sssxbiggestPadding"
+            android:layout_height="@dimen/sssxbiggestPadding"
+            app:lottie_autoPlay="true"
+            android:layout_gravity="center"
+            app:lottie_fileName="empty_view.json"
+            app:lottie_loop="true" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textView"
+            android:layout_gravity="center"
+            android:text="@string/empty_list_msg"
+            android:layout_marginStart="@dimen/normalPadding"
+            android:layout_marginEnd="@dimen/normalPadding"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

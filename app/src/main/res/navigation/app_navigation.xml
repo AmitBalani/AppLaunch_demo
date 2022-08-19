@@ -40,8 +40,7 @@
             app:enterAnim="@anim/enter_from_right"
             app:exitAnim="@anim/exit_to_left"
             app:popEnterAnim="@anim/enter_from_left"
-            app:popExitAnim="@anim/exit_to_right"
-            app:popUpTo="@id/fragmentWelcome" />
+            app:popExitAnim="@anim/exit_to_right" />
 
     </fragment>
 
@@ -51,8 +50,12 @@
         tools:layout="@layout/fragment_user_list">
 
         <action
-            android:id="@+id/action_launcher_to_list"
-            app:destination="@id/fragmentUserList" />
+            android:id="@+id/actionUserListToLogin"
+            app:destination="@id/fragmentUserList"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
     </fragment>
 
 
