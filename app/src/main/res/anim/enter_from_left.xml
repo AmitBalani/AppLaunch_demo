@@ -3,14 +3,14 @@
      android:shareInterpolator="false">
 
     <translate
-        android:duration="@integer/time_duration_max"
+        android:duration="@integer/time_duration_min"
         android:fromXDelta="-100%"
         android:fromYDelta="0%"
         android:toXDelta="0%"
         android:toYDelta="0%"/>
 
     <alpha
-        android:duration="@integer/time_duration_medium"
+        android:duration="@integer/time_duration_min"
         android:fromAlpha="0.5"
         android:interpolator="@android:anim/accelerate_interpolator"
         android:toAlpha="1.0" />

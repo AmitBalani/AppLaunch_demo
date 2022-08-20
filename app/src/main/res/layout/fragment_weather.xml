@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".fragments.WeatherFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_top_view_bg"
+        android:padding="@dimen/miniPadding">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/miniPadding"
+            android:layout_marginTop="@dimen/miniPadding"
+            android:layout_marginEnd="@dimen/miniPadding"
+            android:layout_marginBottom="@dimen/miniPadding"
+            app:srcCompat="@drawable/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textView"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/normalPadding"
+            android:layout_toEndOf="@+id/ivBack"
+            android:text="@string/weather"
+            android:textSize="@dimen/normalSize" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/smallPadding"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/microPadding"
+                android:layout_marginEnd="@dimen/microPadding"
+                android:layout_marginBottom="@dimen/minusMicroPadding"
+                android:background="@drawable/drawable_dark_blue_small_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/llLogout"
+                app:layout_constraintEnd_toEndOf="@+id/llLogout"
+                app:layout_constraintStart_toStartOf="@+id/llLogout"
+                app:layout_constraintTop_toTopOf="@+id/llLogout" />
+
+            <LinearLayout
+                android:id="@+id/llLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/miniPadding"
+                android:background="@drawable/drawable_blue_small_bg"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/textView"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingStart="@dimen/mediumPadding"
+                    android:paddingTop="@dimen/nanoPadding"
+                    android:paddingEnd="@dimen/mediumPadding"
+                    android:paddingBottom="@dimen/nanoPadding"
+                    android:text="@string/logout"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/semibold" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textView"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/normalPadding"
+            android:text="@string/loading_nplease_wait"
+            />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvError"
+        style="@style/textView"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/normalPadding"
+        android:layout_marginEnd="@dimen/normalPadding"
+        android:gravity="center"
+        android:text="@string/error_api_msg"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlToolbar"
+        android:layout_marginStart="@dimen/normalPadding"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/largerPadding"
+            android:text="@string/weather_data"
+            android:textSize="@dimen/xxxLargeSize"
+            app:fontFamily="@font/semibold" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTemp"
+            style="@style/textView"
+            android:textSize="@dimen/normalSize" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWeatherName"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/miniPadding"
+            android:textSize="@dimen/normalSize" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWeatherDescription"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/miniPadding"
+            android:textSize="@dimen/normalSize" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHumidity"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/miniPadding"
+            android:textSize="@dimen/normalSize" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWindSpeed"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/miniPadding"
+            android:textSize="@dimen/normalSize" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

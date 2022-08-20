@@ -20,4 +20,14 @@
     <string name="last_name">Last Name</string>
     <string name="add_user_details">Add User Details</string>
     <string name="valid_info_msg">Enter valid user information</string>
+    <string name="weather">Weather</string>
+    <string name="logout">Logout</string>
+    <string name="error_api_msg">Sorry! API call is not working right now, try again later</string>
+    <string name="weather_data">Weather Data</string>
+    <string name="temp">Temp:- %f</string>
+    <string name="weatherName">Weather:- %s</string>
+    <string name="weatherDescription">Weather Description:- %s</string>
+    <string name="humidity">Humidity:- %d</string>
+    <string name="windSpeed">Wind Speed:- %f</string>
+    <string name="loading_nplease_wait">Loading…\nPLease wait</string>
 </resources>

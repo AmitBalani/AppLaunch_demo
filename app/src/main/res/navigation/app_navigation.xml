@@ -56,6 +56,15 @@
             app:exitAnim="@anim/exit_to_left"
             app:popEnterAnim="@anim/enter_from_left"
             app:popExitAnim="@anim/exit_to_right"/>
+
+        <action
+            android:id="@+id/actionUserListToWeather"
+            app:destination="@id/fragmentWeatherData"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+
     </fragment>
 
     <fragment android:id="@+id/fragmentAddUser"
@@ -65,20 +74,28 @@
 
         <action android:id="@+id/actionAddUserToUserList"
             app:popUpTo="@id/fragmentUserList"
-
             />
-
-        <!--<action
-            android:id="@+id/actionUserListToAddUser"
-            app:destination="@id/fragmentAddUser"
-            app:enterAnim="@anim/enter_from_right"
-            app:exitAnim="@anim/exit_to_left"
-            app:popEnterAnim="@anim/enter_from_left"
-            app:popExitAnim="@anim/exit_to_right" />-->
 
     </fragment>
 
+    <fragment android:id="@+id/fragmentWeatherData"
+        android:name="com.example.amit.applaunchdemo.fragments.WeatherFragment"
+        android:label="fragment_weather"
+        tools:layout="@layout/fragment_weather">
 
+        <action android:id="@+id/actionWeatherToUserList"
+            app:popUpTo="@id/fragmentUserList"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            />
+
+        <action
+            android:id="@+id/actionWeatherDataToLogin"
+            app:popUpTo="@+id/fragmentWelcome"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+
+    </fragment>
 
 
 

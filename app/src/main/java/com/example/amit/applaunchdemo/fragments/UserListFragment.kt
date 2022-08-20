@@ -92,6 +92,11 @@ class UserListFragment : Fragment(), UserItemClickListener {
 
 
     private fun onClickListener() {
+
+        binding.ivBack.setOnClickListener {
+            requireActivity().finishAndRemoveTask()
+        }
+
         binding.ivAddUser.setOnClickListener {
             findNavController().navigate(R.id.actionUserListToAddUser)
         }
@@ -150,7 +155,7 @@ class UserListFragment : Fragment(), UserItemClickListener {
     }
 
     override fun userItemClick(position: Int, userModel: UserModel) {
-
+        findNavController().navigate(R.id.actionUserListToWeather)
     }
 
 

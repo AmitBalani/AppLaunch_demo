@@ -94,6 +94,11 @@ class AddUserFragment : Fragment(), ButtonClickListener {
     }
 
     private fun clickListener() {
+
+        binding.ivBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
         binding.clCancel.setOnClickListener {
             findNavController().popBackStack()
         }
