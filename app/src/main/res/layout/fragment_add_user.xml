@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.amit.applaunchdemo.viewmodel.AddUserViewModel" />
+
+        <variable
+            name="buttonClick"
+            type="com.example.amit.applaunchdemo.interfaces.ButtonClickListener" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".fragments.UserListFragment">
+
+
+        <RelativeLayout
+            android:id="@+id/rlToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_top_view_bg"
+            android:padding="@dimen/miniPadding">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/miniPadding"
+                android:layout_marginTop="@dimen/miniPadding"
+                android:layout_marginEnd="@dimen/miniPadding"
+                android:layout_marginBottom="@dimen/miniPadding"
+                app:srcCompat="@drawable/ic_back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/textView"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/normalPadding"
+                android:layout_toEndOf="@+id/ivBack"
+                android:text="@string/add_user"
+                android:textSize="@dimen/normalSize" />
+
+
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/textView"
+            android:layout_below="@+id/rlToolbar"
+            android:layout_marginStart="@dimen/normalPadding"
+            android:layout_marginTop="@dimen/largerPadding"
+            android:text="@string/add_user_details"
+            android:textSize="@dimen/xxxLargeSize"
+            app:fontFamily="@font/semibold" />
+
+
+        <LinearLayout
+            android:id="@+id/llEditTexts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="@dimen/normalPadding"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normalPadding"
+                android:layout_marginEnd="@dimen/normalPadding"
+                android:background="@drawable/drawable_edittext_bg"
+                android:hint="@string/first_name"
+                android:imeOptions="actionDone"
+                android:padding="@dimen/normalPadding"
+                android:singleLine="true"
+                android:text="@={viewModel.firstName}"
+                android:textColor="@color/white"
+                android:textColorHint="#34FFFFFF"
+                android:textSize="@dimen/extraMediumSize" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normalPadding"
+                android:layout_marginTop="@dimen/normalPadding"
+                android:layout_marginEnd="@dimen/normalPadding"
+                android:background="@drawable/drawable_edittext_bg"
+                android:hint="@string/last_name"
+                android:imeOptions="actionDone"
+                android:padding="@dimen/normalPadding"
+                android:singleLine="true"
+                android:text="@={viewModel.lastName}"
+                android:textColor="@color/white"
+                android:textColorHint="#34FFFFFF"
+                android:textSize="@dimen/extraMediumSize" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normalPadding"
+                android:layout_marginTop="@dimen/normalPadding"
+                android:layout_marginEnd="@dimen/normalPadding"
+                android:background="@drawable/drawable_edittext_bg"
+                android:hint="@string/email_address"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/normalPadding"
+                android:singleLine="true"
+                android:text="@={viewModel.emailId}"
+                android:textColor="@color/white"
+                android:textColorHint="#34FFFFFF"
+                android:textSize="@dimen/extraMediumSize" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llEditTexts"
+            android:layout_marginStart="@dimen/normalPadding"
+            android:layout_marginEnd="@dimen/normalPadding"
+            android:layout_marginTop="@dimen/normalPadding"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/microPadding"
+                    android:layout_marginEnd="@dimen/microPadding"
+                    android:layout_marginBottom="@dimen/minusMicroPadding"
+                    android:background="@drawable/drawable_dark_violet_bg"
+                    app:layout_constraintBottom_toBottomOf="@+id/llCancel"
+                    app:layout_constraintEnd_toEndOf="@+id/llCancel"
+                    app:layout_constraintStart_toStartOf="@+id/llCancel"
+                    app:layout_constraintTop_toTopOf="@+id/llCancel" />
+
+                <LinearLayout
+                    android:id="@+id/llCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/miniPadding"
+                    android:background="@drawable/drawable_violet_bg"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/extraMediumPadding"
+                    android:paddingBottom="@dimen/extraMediumPadding"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/textView"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/mediumPadding"
+                        android:layout_marginTop="@dimen/nanoPadding"
+                        android:text="@string/cancel"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/normalSize"
+                        app:fontFamily="@font/semibold" />
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAddUser"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/miniPadding"
+                android:onClick="@{()->buttonClick.onClick()}">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/microPadding"
+                    android:layout_marginEnd="@dimen/microPadding"
+                    android:layout_marginBottom="@dimen/minusMicroPadding"
+                    android:background="@drawable/drawable_dark_blue_bg"
+                    app:layout_constraintBottom_toBottomOf="@+id/llAddUser"
+                    app:layout_constraintEnd_toEndOf="@+id/llAddUser"
+                    app:layout_constraintStart_toStartOf="@+id/llAddUser"
+                    app:layout_constraintTop_toTopOf="@+id/llAddUser" />
+
+                <LinearLayout
+                    android:id="@+id/llAddUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/miniPadding"
+                    android:background="@drawable/drawable_blue_bg"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/extraMediumPadding"
+                    android:paddingBottom="@dimen/extraMediumPadding"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/textView"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/mediumPadding"
+                        android:layout_marginTop="@dimen/nanoPadding"
+                        android:text="@string/add_user"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normalSize"
+                        app:fontFamily="@font/semibold" />
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

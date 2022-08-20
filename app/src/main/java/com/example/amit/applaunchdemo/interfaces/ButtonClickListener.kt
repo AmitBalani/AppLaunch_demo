@@ -3,7 +3,7 @@ package com.example.amit.applaunchdemo.interfaces
 /**
  * To pass UI events to activity
  */
-interface LogInHandler {
+interface ButtonClickListener {
 
-    fun onLogInClicked()
+    fun onClick()
 }

@@ -50,12 +50,32 @@
         tools:layout="@layout/fragment_user_list">
 
         <action
-            android:id="@+id/actionUserListToLogin"
-            app:destination="@id/fragmentUserList"
+            android:id="@+id/actionUserListToAddUser"
+            app:destination="@id/fragmentAddUser"
             app:enterAnim="@anim/enter_from_right"
             app:exitAnim="@anim/exit_to_left"
             app:popEnterAnim="@anim/enter_from_left"
             app:popExitAnim="@anim/exit_to_right"/>
+    </fragment>
+
+    <fragment android:id="@+id/fragmentAddUser"
+        android:name="com.example.amit.applaunchdemo.fragments.AddUserFragment"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user">
+
+        <action android:id="@+id/actionAddUserToUserList"
+            app:popUpTo="@id/fragmentUserList"
+
+            />
+
+        <!--<action
+            android:id="@+id/actionUserListToAddUser"
+            app:destination="@id/fragmentAddUser"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />-->
+
     </fragment>
 
 

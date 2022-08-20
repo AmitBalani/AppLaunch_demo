@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -55,8 +56,10 @@ class UserListFragment : Fragment(), UserItemClickListener {
         setRecyclerView()
         fetchAllUserData()
         addTouchListener()
+        onClickListener()
         onBackPressCall()
     }
+
 
     private fun initializeAllObjects() {
         userDatabase = UserDatabase.getInstance(requireActivity())!!
@@ -84,6 +87,13 @@ class UserListFragment : Fragment(), UserItemClickListener {
                     }
                 }
             }
+        }
+    }
+
+
+    private fun onClickListener() {
+        binding.ivAddUser.setOnClickListener {
+            findNavController().navigate(R.id.actionUserListToAddUser)
         }
     }
 

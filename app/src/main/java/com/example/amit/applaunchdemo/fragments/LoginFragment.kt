@@ -11,12 +11,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.amit.applaunchdemo.R
 import com.example.amit.applaunchdemo.databinding.FragmentLoginBinding
-import com.example.amit.applaunchdemo.interfaces.LogInHandler
+import com.example.amit.applaunchdemo.interfaces.ButtonClickListener
 import com.example.amit.applaunchdemo.storage.AppPref
 import com.example.amit.applaunchdemo.utils.SUCCESS
 import com.example.amit.applaunchdemo.viewmodel.LoginViewModel
 
-class LoginFragment : Fragment(), LogInHandler {
+class LoginFragment : Fragment(), ButtonClickListener {
 
     private lateinit var binding: FragmentLoginBinding
     private lateinit var viewModel: LoginViewModel
@@ -41,14 +41,14 @@ class LoginFragment : Fragment(), LogInHandler {
     private fun initializeViewModel() {
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         binding.viewModel = viewModel
-        binding.handler = this
+        binding.buttonClick = this
     }
 
     private fun observeData() {
         viewModel.getLogInResult().observe(requireActivity(), Observer { result ->
             if (result == SUCCESS) {
-                findNavController().navigate(R.id.actionLoginToUserList)
                 AppPref.getInstance().setValue(AppPref.IS_USER_LOGGED_IN,true)
+                findNavController().navigate(R.id.actionLoginToUserList)
             } else {
                 Toast.makeText(
                     requireActivity(),
@@ -59,7 +59,7 @@ class LoginFragment : Fragment(), LogInHandler {
         })
     }
 
-    override fun onLogInClicked() {
+    override fun onClick() {
         viewModel.performValidation()
     }
 
