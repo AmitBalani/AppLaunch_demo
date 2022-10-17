@@ -23,15 +23,11 @@ class UserListAdapter(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val userModel = lstModel[position]
-
         val name = "${userModel.firstName} ${userModel.lastName}"
-
         holder.binding.tvName.text = name
-
         holder.binding.tvEmailId.text = userModel.emailAddress
-
-        holder.itemView.setOnClickListener { userItemClickListener.userItemClick(position, userModel) }
-
+        holder.itemView.setOnClickListener { userItemClickListener.userItemClick(position, userModel)
+        }
     }
 
     override fun getItemCount(): Int {
